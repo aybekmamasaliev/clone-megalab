@@ -1,0 +1,79 @@
+.content {
+    max-width: 1140px;
+    height: 247px;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #d9d9d9;
+    padding-top: 10px;
+  }
+  
+  .likes {
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+  
+  .post_img {
+    display: block;
+    max-width: 255px;
+    height: 211px;
+  }
+
+  .imgdiv{
+    width: 255px;
+  }
+  
+  .info_news {
+    width: 737px;
+    height: 100%;
+    margin-left: 40px;
+  }
+  
+  .date {
+    font-family: "Ubuntu";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #858080;
+  }
+  
+  .post_item {
+      font-family: "Ubuntu";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      color: #000000;
+      margin-top: 8px;
+    }
+  
+    .post {
+      font-family: "Ubuntu";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #858080;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  
+    .mt_8{
+      font-family: "Ubuntu";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #7e5bc2;
+      margin-top: 8px;
+    }
+  
+    .block {
+      display: block;
+      margin-top: 7px;
+    }

@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.full {
+  width: 100%;
+}
+
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  /* background-color: aqua; */
+}
+
+.footer {
+  width: 100%;
+  height: 192px;
+  background: #151515;
+  margin-top: 120px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.radios {
+  width: 200px;
+  /* height: 200px; */
+  /* background-color: red; */
+  padding: 10px;
+ 
+}
+.scroll{
+  overflow-y: scroll; 
+  height:400px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.main_content {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.label_style {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+  margin-left: 18px;
+}
+
+.mt14 {
+  margin-top: 14px;
+}
+
+.btn {
+  width: 168px;
+  height: 30px;
+  background: #7e5bc2;
+  border-radius: 10px;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.font_s_15 {
+  font-family: "Ubuntu";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.checkbox {
+  border-radius: 5px;
+}
+
+
+.logo_img_footer {
+  width: 129px;
+  height: 29px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 34px;
+}
+
+.footer_text {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+.flex {
+  display: flex;
+  width: 300px;
+  height: 30px;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.flex_colum {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.no_liked_news{
+  text-align: center;
+  font-size: 30px;
+  color: #000;
+  /* background-color: #151515; */
+  width: 100%;
+  position: absolute;
+  right: 1px;
+}

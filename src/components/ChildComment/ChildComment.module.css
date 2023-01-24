@@ -1,0 +1,72 @@
+.post_reader {
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #000000;
+    margin-top: 20px;
+  }
+
+  .post {
+    font-family: "Ubuntu";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #858080;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
+  .date {
+    font-family: "Ubuntu";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #858080;
+    margin-top: 15px;
+  }
+
+  .reply_btn {
+    font-family: "Ubuntu";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-decoration-line: underline;
+    color: #7e5bc2;
+    display: inline;
+    margin-left: 30px;
+    cursor: pointer;
+  }
+
+
+  .reply_to_comment {
+    width: 457px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .input_repl_comm {
+    width: 274px;
+    height: 27px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .btn_sm {
+    width: 128px;
+    height: 27px;
+    background: #7e5bc2;
+    border-radius: 10px;
+    color: white;
+  }
+
+  .reply_text {
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+  

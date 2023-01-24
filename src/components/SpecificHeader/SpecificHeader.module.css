@@ -1,0 +1,125 @@
+.header {
+    height: 80px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .logo_img {
+    width: 129px;
+    height: 29px;
+    display: block;
+    margin-top: 30px;
+  }
+
+  .all_menus {
+    width: 90px;
+    height: 30px;
+    /* background-color: green; */
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .form_s {
+    position: absolute;
+    top: -7px;
+    right: 20px;
+    transition: all 1s;
+    width: 40px;
+    height: 40px;
+    /* background: red; */
+    box-sizing: border-box;
+    border-radius: 25px;
+    /* border: 1px solid black; */
+  }
+
+  .search_text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+  }
+
+  .search_icon {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -3px;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+  }
+
+  .my_profil {
+    position: absolute;
+    top: 40px;
+    right: 55px;
+    width: 176px;
+    height: 89px;
+    background: #ffffff;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .my_profil_text {
+    font-family: "Ubuntu";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000000;
+    margin-top: 3px;
+    cursor: pointer;
+  }
+
+  .choosen_news_path {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 176px;
+    height: 54px;
+    background: #ffffff;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .form_s:hover {
+    width: 300px;
+    cursor: pointer;
+    background: white;
+  }
+  
+  .form_s:hover .search_text {
+    display: block;
+    border: 1px solid black;
+  }
+  
+  .form:hover .search_text {
+    background: white;
+    color: black;
+  }
