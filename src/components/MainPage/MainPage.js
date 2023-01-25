@@ -54,6 +54,7 @@ const MainPage = () => {
           return res.json();
         } else {
           alert("something is wrong" + res.status);
+          navigate("/")
         }
       })
       .then((data) => setPostsContaxt(data))
