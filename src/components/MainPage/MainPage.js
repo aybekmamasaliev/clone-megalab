@@ -55,6 +55,7 @@ const MainPage = () => {
         } else {
           alert("something is wrong" + res.status);
           navigate("/")
+          return
         }
       })
       .then((data) => setPostsContaxt(data))
