@@ -14,7 +14,24 @@ const MainPage = () => {
   const [confirmtags, setConfirmTags] = useState(false);
   const [ispostloading, setPostLoading] = useState(true)
   const { postscontext, setPostsContaxt } = useContext(AuthContext);
+  const {nicknamecontext}=useContext(AuthContext)
+
   const navigate = useNavigate();
+
+  const exitSite = () => {
+    fetch("https://megalab.pythonanywhere.com/logout/",{
+      method:"GET",
+      headers: {"Authorization": `Token ${localStorage.getItem("token")}`}
+    })
+      .then((res) => {
+        if (res.ok) {
+          localStorage.removeItem("token");
+          navigate("/");
+        }else{
+          console.log(nicknamecontext)
+        }
+      })
+  };
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -30,7 +47,7 @@ const MainPage = () => {
         if(res.ok){
           res.json()
         }else{
-          return
+          exitSite();
         }
       })
       .then((data) => setTags(data));
