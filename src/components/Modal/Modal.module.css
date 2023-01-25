@@ -38,7 +38,9 @@
   border-radius: 10px;
   padding: 10px;
   margin-top: 20px;
-  border: none
+  border: none;
+  word-wrap: break-word;
+  width: 300px;
 }
 
 .p_relative {
