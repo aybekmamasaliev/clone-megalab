@@ -11,7 +11,7 @@ import { AuthContext } from "../../context";
 const SinglePost = (props) => {
   const { likecontext, setLikeContext } = useContext(AuthContext);
   
-  let url="http://localhost:3000/favorit_news/"+props.id;
+  let url="https://celebrated-griffin-fa300b.netlify.app/favorit_news/"+props.id;
   const [heart, setHeart] = useState(like);
 
   useEffect(() => {

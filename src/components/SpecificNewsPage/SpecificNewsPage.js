@@ -16,7 +16,7 @@ const MainPage = () => {
   const { likecontext, setLikeContext } = useContext(AuthContext);
 
   let curretnid = useParams().id;
-  let url="http://localhost:3000/favorit_news/"+curretnid;
+  let url="https://celebrated-griffin-fa300b.netlify.app/favorit_news/"+curretnid;
   const [comment, setComment] = useState("");
 
   const history = useNavigate();

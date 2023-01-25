@@ -11,7 +11,7 @@ import toast from "react-hot-toast";
 const MyPost = (props) => {
     const [vis, setVis] = useState("hidden");
     const {bool, setBool}=useContext(AuthContext);
-    let url = "http://localhost:3000/favorit_news/" + props.id;
+    let url = "https://celebrated-griffin-fa300b.netlify.app/favorit_news/" + props.id;
 
     const closeModal = (x) => {
       changeVis(x);
