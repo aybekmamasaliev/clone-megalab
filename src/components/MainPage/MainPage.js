@@ -29,6 +29,8 @@ const MainPage = () => {
       .then((res) => {
         if(res.ok){
           res.json()
+        }else{
+          return
         }
       })
       .then((data) => setTags(data));
