@@ -16,6 +16,8 @@ const MainPage = () => {
   const { postscontext, setPostsContaxt } = useContext(AuthContext);
   const navigate = useNavigate()
 
+  
+
   useEffect(() => {
     const token = localStorage.getItem("token");
     fetch("https://megalab.pythonanywhere.com/tag/", {
@@ -32,7 +34,6 @@ const MainPage = () => {
         }else{
           localStorage.removeItem("token")
           navigate("/")
-          return
         }      
       })
       .then((data) => setTags(data));
