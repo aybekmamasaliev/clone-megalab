@@ -80,7 +80,7 @@ const SinglePost = (props) => {
             <p className={s.date}>29.11.2022</p>
             <p className={s.post_item}>{props.title}</p>
             <p className={s.post}>{props.short_desc}</p>
-            <p>{props.id}</p>
+            {/* <p>{props.id}</p> */}
             <NavLink to={`/favorit_news/${props.id}`} className={s.mt_8}>
               Читать дальше{" "}
             </NavLink>
