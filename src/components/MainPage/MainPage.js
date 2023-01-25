@@ -30,7 +30,7 @@ const MainPage = () => {
     })
       .then((res) => {
         if(res.ok){
-          res.json()
+          return res.json()
         }else{
           localStorage.removeItem("token")
           navigate("/")
