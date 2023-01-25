@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useMemo, useState } from "react";
 import s from "./MainPage.module.css";
 import logo from "../Media/logo_white.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import SinglePost from "../SinglePostComp/SinglePost";
 import GeneralHeader from "../GeneralHeader/GeneralHeader";
 import { AuthContext } from "../../context";
@@ -14,6 +14,7 @@ const MainPage = () => {
   const [confirmtags, setConfirmTags] = useState(false);
   const [ispostloading, setPostLoading] = useState(true)
   const { postscontext, setPostsContaxt } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -25,7 +26,13 @@ const MainPage = () => {
       credentials: "same-origin",
       mode: "cors",
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if(res.ok){
+          res.json()
+        }else{
+          navigate("/")
+        }
+      })
       .then((data) => setTags(data));
   }, []);
 
