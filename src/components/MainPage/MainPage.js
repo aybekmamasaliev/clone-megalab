@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useMemo, useState } from "react";
 import s from "./MainPage.module.css";
 import logo from "../Media/logo_white.svg";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import SinglePost from "../SinglePostComp/SinglePost";
 import GeneralHeader from "../GeneralHeader/GeneralHeader";
 import { AuthContext } from "../../context";
@@ -14,24 +14,6 @@ const MainPage = () => {
   const [confirmtags, setConfirmTags] = useState(false);
   const [ispostloading, setPostLoading] = useState(true)
   const { postscontext, setPostsContaxt } = useContext(AuthContext);
-  const {nicknamecontext}=useContext(AuthContext)
-
-  const navigate = useNavigate();
-
-  const exitSite = () => {
-    fetch("https://megalab.pythonanywhere.com/logout/",{
-      method:"GET",
-      headers: {"Authorization": `Token ${localStorage.getItem("token")}`}
-    })
-      .then((res) => {
-        if (res.ok) {
-          localStorage.removeItem("token");
-          navigate("/");
-        }else{
-          console.log(nicknamecontext)
-        }
-      })
-  };
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -43,13 +25,7 @@ const MainPage = () => {
       credentials: "same-origin",
       mode: "cors",
     })
-      .then((res) => {
-        if(res.ok){
-          res.json()
-        }else{
-          exitSite();
-        }
-      })
+      .then((res) => res.json())
       .then((data) => setTags(data));
   }, []);
 
@@ -67,12 +43,10 @@ const MainPage = () => {
       }
     )
       .then((res) => {
-        if (res.ok) {
+        if (res.status === 200) {
           return res.json();
         } else {
           alert("something is wrong" + res.status);
-          navigate("/")
-          return
         }
       })
       .then((data) => setPostsContaxt(data))
