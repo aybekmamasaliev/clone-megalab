@@ -50,7 +50,7 @@ const MainPage = () => {
       }
     )
       .then((res) => {
-        if (res.status === 200) {
+        if (res.ok) {
           return res.json();
         } else {
           alert("something is wrong" + res.status);
