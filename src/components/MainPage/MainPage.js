@@ -30,6 +30,7 @@ const MainPage = () => {
         if(res.ok){
           res.json()
         }else{
+          localStorage.removeItem("token")
           navigate("/")
           return
         }      
@@ -54,6 +55,7 @@ const MainPage = () => {
         if (res.status === 200) {
           return res.json();
         } else {
+          localStorage.removeItem("token")
           alert("something is wrong" + res.status);
           navigate("/")
         }
