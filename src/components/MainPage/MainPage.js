@@ -57,7 +57,7 @@ const MainPage = () => {
           return res.json();
         } else {
           localStorage.removeItem("token")
-          alert("something is wrong" + res.status);
+          alert("Вам нужно пройти авторизацию");
           navigate("/")
         }
       })
